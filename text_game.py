@@ -86,7 +86,7 @@ def check_path(chosen_path, current_room):
         elif chosen_path == "west":
             choice = ""
             actions = ["go back", "inspect"]
-            print("You come to wall, you see something shiny in a large crack.")
+            print("You come to a wall, you see something shiny in a large crack.")
             while choice not in actions:
                 choice = input(f"What do you do?\n\n<inspect>  <go back>\n{PROMPT_ARROW}").lower()
             if choice == "go back":
