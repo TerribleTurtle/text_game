@@ -3,8 +3,6 @@
 # text_based adventure game
 
 import time
-import random
-
 
 # Variables
 
@@ -53,7 +51,7 @@ def choose_path(current_room):
     while path not in directions:                       # keeps asking for input until proper input is entered
         if path != "":
             time.sleep(2)
-            path = input(f"\n\nPlease pick an ACTUAL direction!\n{PROMPT}").lower()
+            path = input(f'\n\nPlease pick an ACTUAL direction!\n{PROMPT}').lower()
         else:
             time.sleep(2)
             path = input(f"\n\nWhich way will you go?\n{PROMPT}").lower()
@@ -88,7 +86,7 @@ def check_path(chosen_path, current_room):
             actions = ["go back", "inspect"]
             print("You come to a wall, you see something shiny in a large crack.")
             while choice not in actions:
-                choice = input(f"What do you do?\n\n<inspect>  <go back>\n{PROMPT_ARROW}").lower()
+                choice = input(f'What do you do?\n\n<inspect>  <go back>\n{PROMPT_ARROW}').lower()
             if choice == "go back":
                 print("You walk back to the center\n")
                 choose_path(current_room)
@@ -126,6 +124,5 @@ display_intro()
 
 
 choose_path("entry")
-
 
 
